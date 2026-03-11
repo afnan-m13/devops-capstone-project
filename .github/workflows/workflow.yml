@@ -5,16 +5,22 @@ on:
     branches: [ main ]
 
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Install dependencies
-        run: pip install flake8 nose
+        run: |
+          pip install flake8
+          pip install nose
 
       - name: Lint with flake8
-        run: flake8 .
+        run: |
+          flake8 .
 
-      - name: Run unit tests
-        run: nosetests -v
+      - name: Run unit tests with nose
+        run: |
+          nosetests -v
