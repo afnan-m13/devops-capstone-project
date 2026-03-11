@@ -1,4 +1,4 @@
-# DevOps Capstone Project
+# ci-cd-final-project
 
 This project demonstrates a CI/CD pipeline using:
 
@@ -6,3 +6,4 @@ This project demonstrates a CI/CD pipeline using:
 - Tekton Pipelines
 - OpenShift
 
+Author: afnan-m13
